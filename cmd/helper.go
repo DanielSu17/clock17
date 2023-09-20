@@ -136,7 +136,8 @@ func isTodayHoliday() bool {
 }
 
 func getClockInOrClockOff() timeRange {
-	hours, _, _ := time.Now().Clock()
+	loc, _ := time.LoadLocation("Asia/Taipei")
+	hours, _, _ := time.Now().In(loc).Clock()
 	if hours >= 9 && hours < 11 {
 		return clockInTime
 	}
