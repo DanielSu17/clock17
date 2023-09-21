@@ -15,7 +15,7 @@ import (
 )
 
 const (
-	configFileName = ".17clock.yaml"
+	configFileName = ".clock17.yaml"
 	calendarUrl    = "https://cdn.jsdelivr.net/gh/ruyut/TaiwanCalendar/data/"
 )
 
@@ -78,15 +78,15 @@ func initConfig() error {
 		},
 		{
 			Name:   "latitude",
-			Prompt: &survey.Password{Message: "Enter Latitude"},
+			Prompt: &survey.Input{Message: "Enter Latitude"},
 		},
 		{
 			Name:   "longitude",
-			Prompt: &survey.Password{Message: "Enter Longitude"},
+			Prompt: &survey.Input{Message: "Enter Longitude"},
 		},
 		{
 			Name:   "address",
-			Prompt: &survey.Password{Message: "Enter Address"},
+			Prompt: &survey.Input{Message: "Enter Address"},
 		},
 	}
 	var ans answer
